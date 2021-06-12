@@ -1,0 +1,6 @@
+@mixin button-active($color: $color-green) {
+  &:active,
+  &.active {
+    color: $color;
+  }
+}
