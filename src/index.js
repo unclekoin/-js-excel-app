@@ -2,4 +2,10 @@ import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 import './scss/index.scss';
 
-console.log('Test index.js');
+import {Excel} from './components/excel/Excel';
+
+const excel = new Excel('#app', {
+  components: [],
+});
+
+console.log('Excel', excel);
