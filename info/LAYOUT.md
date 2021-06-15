@@ -6,8 +6,9 @@
 $ npm install normalize.css
 ```
 Import to `index.scss`:
+
 ```scss
-@import "~normalize.css";
+@import "node_modules/normalize.css";
 ```
 
 * [Material Icons Guide](https://google.github.io/material-design-icons/)
