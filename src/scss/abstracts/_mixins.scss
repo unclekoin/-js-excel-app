@@ -1,0 +1,12 @@
+@mixin button-active($color: $color-green) {
+  &:active,
+  &.active {
+    color: $color;
+  }
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

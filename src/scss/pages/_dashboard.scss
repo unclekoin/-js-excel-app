@@ -1,0 +1,84 @@
+.dashboard {
+
+
+  &__header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: $height-dashboard-header;
+    @include flex-center;
+    background-color: $color-light;
+    box-shadow: 0 2px 5px 2px rgba(60, 64, 67, 0.15);
+    z-index: 100;
+  }
+
+  &__new {
+    margin-top: $height-dashboard-header;
+    background-color: $color-dashboard-new;
+  }
+
+  &__create {
+    width: 16rem;
+    height: 16rem;
+    @include flex-center;
+    flex-direction: column;
+    font-size: 2.4rem;
+    line-height: 1.2;
+    color: inherit;
+    text-decoration: none;
+    background-color: $color-light;
+    border: 1px solid $color-dashboard-new;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+      color: $color-green;
+      border-color: $color-green
+    }
+  }
+
+  &__table {
+  }
+
+  &__list-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    padding: 0 1rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    font-size: 1.4rem;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: $color-dashboard-new;
+      border-radius: 2.5rem;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 0.5rem;
+    }
+
+    a {
+      text-decoration: none;
+      font-size: 1.4rem;
+      color: inherit;
+
+      &:hover {
+        color: $color-light;
+      }
+    }
+  }
+}
