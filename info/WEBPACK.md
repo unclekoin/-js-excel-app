@@ -62,6 +62,9 @@ $ npm install eslint --save-dev
 ```bash
 $ npm install @babel/eslint-parser --save-dev
 ```
+```bash
+$ npm install @babel/plugin-proposal-class-properties --save-dev
+```
 Create `.eslintrc.js` and `babel.config.json`
 
 [eslint-config-google](https://github.com/google/eslint-config-google)
