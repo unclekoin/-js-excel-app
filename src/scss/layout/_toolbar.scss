@@ -1,14 +1,16 @@
 .excel__toolbar {
-  position: absolute;
+  position: fixed;
   top: $height-header;
   left: 0;
   right: 0;
+  z-index: 100;
   height: $height-toolbar;
   padding: 0 0.4rem;
   display: flex;
   align-items: center;
   border-top: 1px solid $color-light-grey;
   border-bottom: 1px solid $color-light-grey;
+  background-color: $color-light;
 
   .button {
     @include button-active ($color-green);

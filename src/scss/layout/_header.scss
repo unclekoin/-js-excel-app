@@ -1,13 +1,15 @@
 .excel__header {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   left: 0;
+  z-index: 100;
   height: $height-header;
   padding: 0 0.4rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: $color-light;
 
   .input {
     padding: 0.2rem 0.7rem;
