@@ -1,12 +1,14 @@
 .excel__formula {
-  position: absolute;
+  position: fixed;
   top: $height-header + $height-toolbar;
   left: 0;
   right: 0;
+  z-index: 100;
   height: $height-formula;
   padding: 0 0.4rem;
   display: flex;
   align-items: center;
+  background-color: $color-light;
   border-bottom: 1px solid $color-light-grey;
 
   .info {
