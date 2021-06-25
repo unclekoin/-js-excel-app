@@ -10,3 +10,13 @@
   justify-content: center;
   align-items: center;
 }
+
+@mixin resize-style {
+  position: absolute;
+  background-color: $color-outline-cell;
+  opacity: 0;
+  transition: opacity 0.2s;
+  &:hover {
+    opacity: 1;
+  }
+}

@@ -11,14 +11,21 @@ function toCell() {
 
 function toColumn(char) {
   return `
-    <div class="column">${char}</div>
+    <div class="column">
+        ${char}
+        <div class="column-resize"></div>
+    </div>
   `;
 }
 
 function createRow(index, content) {
+  const resize = index ? '<div class="row-resize"></div>' : '';
   return `
     <div class="row">
-      <div class="row-info">${index ? index : ''}</div>
+      <div class="row-info">
+        ${index ? index : ''}
+        ${resize}
+       </div>
       <div class="row-data">${content}</div>
      </div>
   `;
@@ -28,7 +35,7 @@ function toChar(_, index ) {
   return String.fromCharCode(CODES.A + index);
 }
 
-export function createTable(rowCount = 70) {
+export function createTable(rowsCount = 70) {
   const colsCount = CODES.Z - CODES.A + 1;
   const rows = [];
 
@@ -40,7 +47,7 @@ export function createTable(rowCount = 70) {
 
   rows.push(createRow(null, cols));
 
-  for (let i = 0; i < rowCount; i++) {
+  for (let i = 0; i < rowsCount; i++) {
     const cells = new Array(colsCount)
         .fill('')
         .map(toCell)

@@ -12,6 +12,7 @@
   }
 
   .row-info {
+    position: relative;
     @include flex-center;
     min-width: $width-info-cell;
     height: 100%;
@@ -20,11 +21,21 @@
     background-color: $color-info-cell;
   }
 
+  .row-resize {
+    @include resize-style;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    cursor: row-resize;
+  }
+
   .row-data {
     @include flex-center;
   }
 
   .column {
+    position: relative;
     @include flex-center;
     min-width: 4rem;
     width: $width-cell;
@@ -34,6 +45,15 @@
     border: 1px solid $color-light-grey;
     border-top: none;
     border-left: none;
+
+    &-resize {
+      @include resize-style;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      width: 4px;
+      cursor: col-resize;
+    }
   }
 
   .cell {
