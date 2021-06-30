@@ -9,6 +9,19 @@
     display: flex;
     min-height: 2rem;
     height: $height-row;
+
+    &-resize {
+      @include resize-style;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      cursor: row-resize;
+
+      &:active {
+        width: 100vw;
+      }
+    }
   }
 
   .row-info {
@@ -19,19 +32,11 @@
     border: 1px solid $color-light-grey;
     border-top: none;
     background-color: $color-info-cell;
-  }
-
-  .row-resize {
-    @include resize-style;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    cursor: row-resize;
+    user-select: none;
   }
 
   .row-data {
-    @include flex-center;
+    display: flex;
   }
 
   .column {
@@ -45,6 +50,7 @@
     border: 1px solid $color-light-grey;
     border-top: none;
     border-left: none;
+    user-select: none;
 
     &-resize {
       @include resize-style;
@@ -53,6 +59,9 @@
       right: 0;
       width: 4px;
       cursor: col-resize;
+      &:active {
+        height: 100vh;
+      }
     }
   }
 

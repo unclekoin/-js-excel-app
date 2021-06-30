@@ -13,10 +13,12 @@
 
 @mixin resize-style {
   position: absolute;
+  z-index: 100;
   background-color: $color-outline-cell;
   opacity: 0;
   transition: opacity 0.2s;
-  &:hover {
+  &:hover,
+  &:active {
     opacity: 1;
   }
 }
